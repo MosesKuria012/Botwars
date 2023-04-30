@@ -1,13 +1,123 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 1700px;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.header {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.name {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 40px;
+  width: 80%;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
+}
+
+.bots,
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 0 0 calc(25% - 200px);
+  max-width: calc(25% - 20px);
+  margin-bottom: 20px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  padding: 20px;
+  background-color: wheat;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.cards {
+  max-width: calc(25% - 210px);
+  margin-bottom: 20px;
+  width: auto;
+  justify-content: space-between;
+  height: auto;
+  overflow: hidden;
+  padding: 20px;
+  background-color: wheat;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  text-align: center;
+  transition: 0.2s;
+  width: 25%;
+  margin-bottom: 20px; /* optional, for spacing between cards */
+  display: inline-block; /* or display: flex */
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.card:hover {
+  border-color: #4caf50;
+}
+
+.cards:hover {
+  border-color: rgb(41, 105, 178);
+}
+.card img,
+.cards img {
+  width: 60%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.selected-cards {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+### NFT BOTWARS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NFT BOTWARS is a React application that displays a list of bots and allows the user to select their favorite bots. The user can select multiple bots, and the selected bots are displayed in a separate section of the page.
 
-## Available Scripts
+## BotItems
 
-In the project directory, you can run:
+This is a React functional component that renders a list of bots with their avatars, names, and some details, as well as two buttons for each bot: one to show/hide more details and another to select the bot.
 
-### `npm start`
+# useState
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The component uses React hooks, specifically useState. The component defines three state variables using the useState hook: botData to store the bot data, showDetailsIndex to store the index of the bot whose details are currently being shown, and selectedCard to store an array of bots that have been enlisted.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# useEffect
 
-### `npm test`
+The component uses the useEffect hook to set the initial value of botData to the bots data imported from the ../data file.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# EventHandlers
 
-### `npm run build`
+The component defines three event handler functions: handleClick to toggle the display of a bot's details, handleCardClick to add a bot to the selectedCard array, and handleDeleteCard to remove a bot from the selectedCard array.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The handleClick function is called when the user clicks the "Show Details"/"Hide Details" button for a bot. It toggles the showDetailsIndex state between the index of the selected bot and -1. The details are only shown when the index matches the showDetailsIndex state.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Return
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The component returns a JSX element that displays the bot list and selected bots.
 
-### `npm run eject`
+The bot list is displayed as a series of div elements with the card class, and the selectedCard array is displayed as a series of div elements with the cards class.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Each card element displays a bot's image, name, and two buttons: one to show or hide the bot's details, and one to enlist the bot.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+When a bot is enlisted, it is added to the selectedCard array, and its card element is highlighted with the selected class. When a bot's details are shown, the showDetailsIndex state variable is updated to the index of the bot.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The selectedCard array is displayed only when it is not empty, and the component also displays a header and horizontal lines to separate the bot list and selected bots.
+# Botwars
